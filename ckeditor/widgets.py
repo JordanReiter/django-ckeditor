@@ -28,10 +28,10 @@ class CKEditorWidget(forms.Textarea):
     class Media:
         try:
             js = (
-                settings.CKEDITOR_MEDIA_PREFIX + 'ckeditor/ckeditor.js',
+                settings.STATIC_URL + 'ckeditor/ckeditor.js',
             )
         except AttributeError:
-            raise ImproperlyConfigured("django-ckeditor requires CKEDITOR_MEDIA_PREFIX setting. This setting specifies a URL prefix to the ckeditor JS and CSS media (not uploaded media). Make sure to use a trailing slash: CKEDITOR_MEDIA_PREFIX = '/media/ckeditor/'")
+            raise ImproperlyConfigured("django-ckeditor requires STATIC_URL setting.")
 
     def __init__(self, config_name='default', *args, **kwargs):
         super(CKEditorWidget, self).__init__(*args, **kwargs)
