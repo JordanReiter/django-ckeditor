@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -34,8 +34,8 @@ CKEDITOR.lang['lt'] =
 	editorTitle : 'Rich text editor, %1, press ALT 0 for help.', // MISSING
 
 	// ARIA descriptions.
-	toolbar	: 'Toolbar', // MISSING
-	editor	: 'Rich Text Editor', // MISSING
+	toolbars	: 'Editor toolbars', // MISSING
+	editor		: 'Rich Text Editor', // MISSING
 
 	// Toolbar buttons without dialogs.
 	source			: 'Šaltinis',
@@ -56,6 +56,7 @@ CKEDITOR.lang['lt'] =
 	superscript		: 'Viršutinis indeksas',
 	horizontalrule	: 'Įterpti horizontalią liniją',
 	pagebreak		: 'Įterpti puslapių skirtuką',
+	pagebreakAlt		: 'Page Break', // MISSING
 	unlink			: 'Panaikinti nuorodą',
 	undo			: 'Atšaukti',
 	redo			: 'Atstatyti',
@@ -105,22 +106,46 @@ CKEDITOR.lang['lt'] =
 		targetTop		: 'Topmost Window (_top)', // MISSING
 		targetSelf		: 'Same Window (_self)', // MISSING
 		targetParent	: 'Parent Window (_parent)', // MISSING
+		langDirLTR		: 'Left to Right (LTR)', // MISSING
+		langDirRTL		: 'Right to Left (RTL)', // MISSING
+		styles			: 'Style', // MISSING
+		cssClasses		: 'Stylesheet Classes', // MISSING
+		width			: 'Plotis',
+		height			: 'Aukštis',
+		align			: 'Lygiuoti',
+		alignLeft		: 'Kairę',
+		alignRight		: 'Dešinę',
+		alignCenter		: 'Centrą',
+		alignTop		: 'Viršūnę',
+		alignMiddle		: 'Vidurį',
+		alignBottom		: 'Apačią',
+		invalidHeight	: 'Height must be a number.', // MISSING
+		invalidWidth	: 'Width must be a number.', // MISSING
+		invalidCssLength	: 'Value specified for the "%1" field must be a positive number with or without a valid CSS measurement unit (px, %, in, cm, mm, em, ex, pt, or pc).', // MISSING
+		invalidHtmlLength	: 'Value specified for the "%1" field must be a positive number with or without a valid HTML measurement unit (px or %).', // MISSING
 
 		// Put the voice-only part of the label in the span.
 		unavailable		: '%1<span class="cke_accessibility">, unavailable</span>' // MISSING
+	},
+
+	contextmenu :
+	{
+		options : 'Context Menu Options' // MISSING
 	},
 
 	// Special char dialog.
 	specialChar		:
 	{
 		toolbar		: 'Įterpti specialų simbolį',
-		title		: 'Pasirinkite specialų simbolį'
+		title		: 'Pasirinkite specialų simbolį',
+		options : 'Special Character Options' // MISSING
 	},
 
 	// Link dialog.
 	link :
 	{
 		toolbar		: 'Įterpti/taisyti nuorodą',
+		other 		: '<kitas>',
 		menu		: 'Taisyti nuorodą',
 		title		: 'Nuoroda',
 		info		: 'Nuorodos informacija',
@@ -144,9 +169,7 @@ CKEDITOR.lang['lt'] =
 		popupFullScreen	: 'Visas ekranas (IE)',
 		popupScrollBars	: 'Slinkties juostos',
 		popupDependent	: 'Priklausomas (Netscape)',
-		popupWidth		: 'Plotis',
 		popupLeft		: 'Kairė pozicija',
-		popupHeight		: 'Aukštis',
 		popupTop		: 'Viršutinė pozicija',
 		id				: 'Id', // MISSING
 		langDir			: 'Teksto kryptis',
@@ -154,18 +177,19 @@ CKEDITOR.lang['lt'] =
 		langDirRTL		: 'Iš dešinės į kairę (RTL)',
 		acccessKey		: 'Prieigos raktas',
 		name			: 'Vardas',
-		langCode		: 'Teksto kryptis',
-		tabIndex		: 'Tabuliavimo indeksas',
-		advisoryTitle	: 'Konsultacinė antraštė',
+		langCode			: 'Teksto kryptis',
+		tabIndex			: 'Tabuliavimo indeksas',
+		advisoryTitle		: 'Konsultacinė antraštė',
 		advisoryContentType	: 'Konsultacinio turinio tipas',
 		cssClasses		: 'Stilių lentelės klasės',
 		charset			: 'Susietų išteklių simbolių lentelė',
 		styles			: 'Stilius',
-		selectAnchor	: 'Pasirinkite žymę',
+		rel			: 'Relationship', // MISSING
+		selectAnchor		: 'Pasirinkite žymę',
 		anchorName		: 'Pagal žymės vardą',
-		anchorId		: 'Pagal žymės Id',
-		emailAddress	: 'El.pašto adresas',
-		emailSubject	: 'Žinutės tema',
+		anchorId			: 'Pagal žymės Id',
+		emailAddress		: 'El.pašto adresas',
+		emailSubject		: 'Žinutės tema',
 		emailBody		: 'Žinutės turinys',
 		noAnchors		: '(Šiame dokumente žymių nėra)',
 		noUrl			: 'Prašome įvesti nuorodos URL',
@@ -179,7 +203,32 @@ CKEDITOR.lang['lt'] =
 		menu		: 'Žymės savybės',
 		title		: 'Žymės savybės',
 		name		: 'Žymės vardas',
-		errorName	: 'Prašome įvesti žymės vardą'
+		errorName	: 'Prašome įvesti žymės vardą',
+		remove		: 'Remove Anchor' // MISSING
+	},
+
+	// List style dialog
+	list:
+	{
+		numberedTitle		: 'Numbered List Properties', // MISSING
+		bulletedTitle		: 'Bulleted List Properties', // MISSING
+		type				: 'Type', // MISSING
+		start				: 'Start', // MISSING
+		validateStartNumber				:'List start number must be a whole number.', // MISSING
+		circle				: 'Circle', // MISSING
+		disc				: 'Disc', // MISSING
+		square				: 'Square', // MISSING
+		none				: 'None', // MISSING
+		notset				: '<not set>', // MISSING
+		armenian			: 'Armenian numbering', // MISSING
+		georgian			: 'Georgian numbering (an, ban, gan, etc.)', // MISSING
+		lowerRoman			: 'Lower Roman (i, ii, iii, iv, v, etc.)', // MISSING
+		upperRoman			: 'Upper Roman (I, II, III, IV, V, etc.)', // MISSING
+		lowerAlpha			: 'Lower Alpha (a, b, c, d, e, etc.)', // MISSING
+		upperAlpha			: 'Upper Alpha (A, B, C, D, E, etc.)', // MISSING
+		lowerGreek			: 'Lower Greek (alpha, beta, gamma, etc.)', // MISSING
+		decimal				: 'Decimal (1, 2, 3, etc.)', // MISSING
+		decimalLeadingZero	: 'Decimal leading zero (01, 02, 03, etc.)' // MISSING
 	},
 
 	// Find And Replace Dialog
@@ -208,15 +257,9 @@ CKEDITOR.lang['lt'] =
 		rows		: 'Eilutės',
 		columns		: 'Stulpeliai',
 		border		: 'Rėmelio dydis',
-		align		: 'Lygiuoti',
-		alignLeft	: 'Kairę',
-		alignCenter	: 'Centrą',
-		alignRight	: 'Dešinę',
-		width		: 'Plotis',
 		widthPx		: 'taškais',
 		widthPc		: 'procentais',
 		widthUnit	: 'width unit', // MISSING
-		height		: 'Aukštis',
 		cellSpace	: 'Tarpas tarp langelių',
 		cellPad		: 'Trapas nuo langelio rėmo iki teksto',
 		caption		: 'Antraštė',
@@ -231,8 +274,8 @@ CKEDITOR.lang['lt'] =
 		invalidBorder	: 'Border size must be a number.', // MISSING
 		invalidWidth	: 'Table width must be a number.', // MISSING
 		invalidHeight	: 'Table height must be a number.', // MISSING
-		invalidCellSpacing	: 'Cell spacing must be a number.', // MISSING
-		invalidCellPadding	: 'Cell padding must be a number.', // MISSING
+		invalidCellSpacing	: 'Cell spacing must be a positive number.', // MISSING
+		invalidCellPadding	: 'Cell padding must be a positive number.', // MISSING
 
 		cell :
 		{
@@ -252,9 +295,6 @@ CKEDITOR.lang['lt'] =
 			wordWrap		: 'Word Wrap', // MISSING
 			hAlign			: 'Horizontal Alignment', // MISSING
 			vAlign			: 'Vertical Alignment', // MISSING
-			alignTop		: 'Top', // MISSING
-			alignMiddle		: 'Middle', // MISSING
-			alignBottom		: 'Bottom', // MISSING
 			alignBaseline	: 'Baseline', // MISSING
 			bgColor			: 'Background Color', // MISSING
 			borderColor		: 'Border Color', // MISSING
@@ -375,24 +415,16 @@ CKEDITOR.lang['lt'] =
 		btnUpload	: 'Siųsti į serverį',
 		upload		: 'Nusiųsti',
 		alt			: 'Alternatyvus Tekstas',
-		width		: 'Plotis',
-		height		: 'Aukštis',
 		lockRatio	: 'Išlaikyti proporciją',
-		unlockRatio	: 'Unlock Ratio', // MISSING
 		resetSize	: 'Atstatyti dydį',
 		border		: 'Rėmelis',
 		hSpace		: 'Hor.Erdvė',
 		vSpace		: 'Vert.Erdvė',
-		align		: 'Lygiuoti',
-		alignLeft	: 'Kairę',
-		alignRight	: 'Dešinę',
 		alertUrl	: 'Prašome įvesti vaizdo URL',
 		linkTab		: 'Nuoroda',
 		button2Img	: 'Do you want to transform the selected image button on a simple image?', // MISSING
 		img2Button	: 'Do you want to transform the selected image on a image button?', // MISSING
 		urlMissing	: 'Image source URL is missing.', // MISSING
-		validateWidth	: 'Width must be a whole number.', // MISSING
-		validateHeight	: 'Height must be a whole number.', // MISSING
 		validateBorder	: 'Border must be a whole number.', // MISSING
 		validateHSpace	: 'HSpace must be a whole number.', // MISSING
 		validateVSpace	: 'VSpace must be a whole number.' // MISSING
@@ -416,16 +448,10 @@ CKEDITOR.lang['lt'] =
 		accessAlways	: 'Always', // MISSING
 		accessSameDomain: 'Same domain', // MISSING
 		accessNever		: 'Never', // MISSING
-		align			: 'Lygiuoti',
-		alignLeft		: 'Kairę',
 		alignAbsBottom	: 'Absoliučią apačią',
 		alignAbsMiddle	: 'Absoliutų vidurį',
 		alignBaseline	: 'Apatinę liniją',
-		alignBottom		: 'Apačią',
-		alignMiddle		: 'Vidurį',
-		alignRight		: 'Dešinę',
 		alignTextTop	: 'Teksto viršūnę',
-		alignTop		: 'Viršūnę',
 		quality			: 'Quality', // MISSING
 		qualityBest		: 'Best', // MISSING
 		qualityHigh		: 'High', // MISSING
@@ -439,13 +465,9 @@ CKEDITOR.lang['lt'] =
 		windowMode		: 'Window mode', // MISSING
 		flashvars		: 'Variables for Flash', // MISSING
 		bgcolor			: 'Fono spalva',
-		width			: 'Plotis',
-		height			: 'Aukštis',
 		hSpace			: 'Hor.Erdvė',
 		vSpace			: 'Vert.Erdvė',
 		validateSrc		: 'Prašome įvesti nuorodos URL',
-		validateWidth	: 'Width must be a number.', // MISSING
-		validateHeight	: 'Height must be a number.', // MISSING
 		validateHSpace	: 'HSpace must be a number.', // MISSING
 		validateVSpace	: 'VSpace must be a number.' // MISSING
 	},
@@ -476,7 +498,8 @@ CKEDITOR.lang['lt'] =
 	smiley :
 	{
 		toolbar	: 'Veideliai',
-		title	: 'Įterpti veidelį'
+		title	: 'Įterpti veidelį',
+		options : 'Smiley Options' // MISSING
 	},
 
 	elementsPath :
@@ -503,9 +526,9 @@ CKEDITOR.lang['lt'] =
 	clipboard :
 	{
 		title		: 'Įdėti',
-		cutError	: 'Jūsų naršyklės saugumo nustatymai neleidžia redaktoriui automatiškai įvykdyti iškirpimo operacijų. Tam prašome naudoti klaviatūrą (Ctrl+X).',
-		copyError	: 'Jūsų naršyklės saugumo nustatymai neleidžia redaktoriui automatiškai įvykdyti kopijavimo operacijų. Tam prašome naudoti klaviatūrą (Ctrl+C).',
-		pasteMsg	: 'Žemiau esančiame įvedimo lauke įdėkite tekstą, naudodami klaviatūrą (<STRONG>Ctrl+V</STRONG>) ir paspauskite mygtuką <STRONG>OK</STRONG>.',
+		cutError	: 'Jūsų naršyklės saugumo nustatymai neleidžia redaktoriui automatiškai įvykdyti iškirpimo operacijų. Tam prašome naudoti klaviatūrą (Ctrl/Cmd+X).',
+		copyError	: 'Jūsų naršyklės saugumo nustatymai neleidžia redaktoriui automatiškai įvykdyti kopijavimo operacijų. Tam prašome naudoti klaviatūrą (Ctrl/Cmd+C).',
+		pasteMsg	: 'Žemiau esančiame įvedimo lauke įdėkite tekstą, naudodami klaviatūrą (<STRONG>Ctrl/Cmd+V</STRONG>) ir paspauskite mygtuką <STRONG>OK</STRONG>.',
 		securityMsg	: 'Dėl jūsų naršyklės saugumo nustatymų, redaktorius negali tiesiogiai pasiekti laikinosios atminties. Jums reikia nukopijuoti dar kartą į šį langą.',
 		pasteArea	: 'Paste Area' // MISSING
 	},
@@ -528,6 +551,7 @@ CKEDITOR.lang['lt'] =
 	{
 		button			: 'Šablonai',
 		title			: 'Turinio šablonai',
+		options : 'Template Options', // MISSING
 		insertOption	: 'Pakeisti dabartinį turinį pasirinktu šablonu',
 		selectPromptMsg	: 'Pasirinkite norimą šabloną<br>(<b>Dėmesio!</b> esamas turinys bus prarastas):',
 		emptyListMsg	: '(Šablonų sąrašas tuščias)'
@@ -578,6 +602,15 @@ CKEDITOR.lang['lt'] =
 		remove				: 'Remove Div' // MISSING
   	},
 
+	iframe :
+	{
+		title		: 'IFrame Properties', // MISSING
+		toolbar		: 'IFrame', // MISSING
+		noUrl		: 'Please type the iframe URL', // MISSING
+		scrolling	: 'Enable scrollbars', // MISSING
+		border		: 'Show frame border' // MISSING
+	},
+
 	font :
 	{
 		label		: 'Šriftas',
@@ -610,7 +643,7 @@ CKEDITOR.lang['lt'] =
 		'008080' : 'Teal', // MISSING
 		'000080' : 'Navy', // MISSING
 		'4B0082' : 'Indigo', // MISSING
-		'696969' : 'Dim Gray', // MISSING
+		'696969' : 'Dark Gray', // MISSING
 		'B22222' : 'Fire Brick', // MISSING
 		'A52A2A' : 'Brown', // MISSING
 		'DAA520' : 'Golden Rod', // MISSING
@@ -626,7 +659,7 @@ CKEDITOR.lang['lt'] =
 		'0FF' : 'Cyan', // MISSING
 		'00F' : 'Blue', // MISSING
 		'EE82EE' : 'Violet', // MISSING
-		'A9A9A9' : 'Dark Gray', // MISSING
+		'A9A9A9' : 'Dim Gray', // MISSING
 		'FFA07A' : 'Light Salmon', // MISSING
 		'FFA500' : 'Orange', // MISSING
 		'FFFF00' : 'Yellow', // MISSING
@@ -648,6 +681,7 @@ CKEDITOR.lang['lt'] =
 	scayt :
 	{
 		title			: 'Spell Check As You Type', // MISSING
+		opera_title		: 'Not supported by Opera', // MISSING
 		enable			: 'Enable SCAYT', // MISSING
 		disable			: 'Disable SCAYT', // MISSING
 		about			: 'About SCAYT', // MISSING
@@ -659,9 +693,23 @@ CKEDITOR.lang['lt'] =
 		ignoreAll		: 'Ignore All', // MISSING
 		addWord			: 'Add Word', // MISSING
 		emptyDic		: 'Dictionary name should not be empty.', // MISSING
+
 		optionsTab		: 'Options', // MISSING
+		allCaps			: 'Ignore All-Caps Words', // MISSING
+		ignoreDomainNames : 'Ignore Domain Names', // MISSING
+		mixedCase		: 'Ignore Words with Mixed Case', // MISSING
+		mixedWithDigits	: 'Ignore Words with Numbers', // MISSING
+
 		languagesTab	: 'Languages', // MISSING
+
 		dictionariesTab	: 'Dictionaries', // MISSING
+		dic_field_name	: 'Dictionary name', // MISSING
+		dic_create		: 'Create', // MISSING
+		dic_restore		: 'Restore', // MISSING
+		dic_delete		: 'Delete', // MISSING
+		dic_rename		: 'Rename', // MISSING
+		dic_info		: 'Initially the User Dictionary is stored in a Cookie. However, Cookies are limited in size. When the User Dictionary grows to a point where it cannot be stored in a Cookie, then the dictionary may be stored on our server. To store your personal dictionary on our server you should specify a name for your dictionary. If you already have a stored dictionary, please type its name and click the Restore button.', // MISSING
+
 		aboutTab		: 'About' // MISSING
 	},
 
@@ -669,6 +717,8 @@ CKEDITOR.lang['lt'] =
 	{
 		title		: 'About CKEditor', // MISSING
 		dlgTitle	: 'About CKEditor', // MISSING
+		help	: 'Check $1 for help.', // MISSING
+		userGuide : 'CKEditor User\'s Guide', // MISSING
 		moreInfo	: 'For licensing information please visit our web site:', // MISSING
 		copy		: 'Copyright &copy; $1. All rights reserved.' // MISSING
 	},
@@ -678,10 +728,11 @@ CKEDITOR.lang['lt'] =
 
 	fakeobjects :
 	{
-		anchor	: 'Anchor', // MISSING
-		flash	: 'Flash Animation', // MISSING
-		div		: 'Page Break', // MISSING
-		unknown	: 'Unknown Object' // MISSING
+		anchor		: 'Anchor', // MISSING
+		flash		: 'Flash Animation', // MISSING
+		iframe		: 'IFrame', // MISSING
+		hiddenfield	: 'Hidden Field', // MISSING
+		unknown		: 'Unknown Object' // MISSING
 	},
 
 	resize : 'Drag to resize', // MISSING
@@ -689,11 +740,73 @@ CKEDITOR.lang['lt'] =
 	colordialog :
 	{
 		title		: 'Select color', // MISSING
+		options	:	'Color Options', // MISSING
 		highlight	: 'Highlight', // MISSING
-		selected	: 'Selected', // MISSING
+		selected	: 'Selected Color', // MISSING
 		clear		: 'Clear' // MISSING
 	},
 
 	toolbarCollapse	: 'Collapse Toolbar', // MISSING
-	toolbarExpand	: 'Expand Toolbar' // MISSING
+	toolbarExpand	: 'Expand Toolbar', // MISSING
+
+	toolbarGroups :
+	{
+		document : 'Document', // MISSING
+		clipboard : 'Clipboard/Undo', // MISSING
+		editing : 'Editing', // MISSING
+		forms : 'Forms', // MISSING
+		basicstyles : 'Basic Styles', // MISSING
+		paragraph : 'Paragraph', // MISSING
+		links : 'Links', // MISSING
+		insert : 'Insert', // MISSING
+		styles : 'Styles', // MISSING
+		colors : 'Colors', // MISSING
+		tools : 'Tools' // MISSING
+	},
+
+	bidi :
+	{
+		ltr : 'Text direction from left to right', // MISSING
+		rtl : 'Text direction from right to left' // MISSING
+	},
+
+	docprops :
+	{
+		label : 'Dokumento savybės',
+		title : 'Dokumento savybės',
+		design : 'Design', // MISSING
+		meta : 'Meta duomenys',
+		chooseColor : 'Choose', // MISSING
+		other : '<kitas>',
+		docTitle :	'Puslapio antraštė',
+		charset : 	'Simbolių kodavimo lentelė',
+		charsetOther : 'Kita simbolių kodavimo lentelė',
+		charsetASCII : 'ASCII', // MISSING
+		charsetCE : 'Centrinės Europos',
+		charsetCT : 'Tradicinės kinų (Big5)',
+		charsetCR : 'Kirilica',
+		charsetGR : 'Graikų',
+		charsetJP : 'Japonų',
+		charsetKR : 'Korėjiečių',
+		charsetTR : 'Turkų',
+		charsetUN : 'Unikodas (UTF-8)',
+		charsetWE : 'Vakarų Europos',
+		docType : 'Dokumento tipo antraštė',
+		docTypeOther : 'Kita dokumento tipo antraštė',
+		xhtmlDec : 'Įtraukti XHTML deklaracijas',
+		bgColor : 'Fono spalva',
+		bgImage : 'Fono paveikslėlio nuoroda (URL)',
+		bgFixed : 'Neslenkantis fonas',
+		txtColor : 'Teksto spalva',
+		margin : 'Puslapio kraštinės',
+		marginTop : 'Viršuje',
+		marginLeft : 'Kairėje',
+		marginRight : 'Dešinėje',
+		marginBottom : 'Apačioje',
+		metaKeywords : 'Dokumento indeksavimo raktiniai žodžiai (atskirti kableliais)',
+		metaDescription : 'Dokumento apibūdinimas',
+		metaAuthor : 'Autorius',
+		metaCopyright : 'Autorinės teisės',
+		previewHtml : '<p>This is some <strong>sample text</strong>. You are using <a href="javascript:void(0)">CKEditor</a>.</p>' // MISSING
+	}
 };
